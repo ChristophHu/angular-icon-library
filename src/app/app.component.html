@@ -7,7 +7,7 @@
     </label>
   </div>
   <div *ngIf="!alphabetical">
-    <div class="mb-5 grid grid-cols-6">
+    <div class="mb-5 grid grid-cols-5">
       <div class="flex flex-row w-48 h-12 m-1 items-center justify-between bg-gray-100 rounded shadow-xl" *ngFor="let icon of icons">
         <p class="w-36 p-2">{{ icon }}</p>
         <div class="w-12 h-12 p-1 border-l border-gray-400 text-gray-700 hover:bg-gray-800 hover:text-gray-100 hover:rounded-r">
@@ -19,7 +19,7 @@
   <div *ngIf="alphabetical">
     <div *ngFor="let letter of letters">
       <h2 class="mb-2 text-lg">{{letter.char}}</h2>
-      <div class="mb-5 grid grid-cols-6">
+      <div class="mb-5 grid grid-cols-5">
         <div class="flex flex-row w-48 h-12 m-1 items-center justify-between bg-gray-100 rounded shadow-xl" *ngFor="let icon of letter.icons">
           <p class="w-36 p-2">{{ icon }}</p>
           <div class="w-12 h-12 p-1 border-l border-gray-400 text-gray-700 hover:bg-gray-800 hover:text-gray-100 hover:rounded-r">
