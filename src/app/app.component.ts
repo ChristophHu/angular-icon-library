@@ -8,10 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   alphabetical: boolean = false
   icons: string[] = [
-    '2fa', 'add', 'adjustment', 'alert-circle', 'alert-triangle', 'arrow-back-up', 'arrow-left', 'arrow-right', 'bell', 'bordbuch', 'calendar-event', 'check', 'chevron-down', 'chevron-left', 'chevron-right', 'chevron-up', 'clock', 'cursor', 'edit', 'dashboard', 'dots', 'dots-horizontal', 'dots-vertical', 'download', 'drag-n-drop', 'drag-n-drop-click', 'exclamation', 'eye', 'eye-off', 'file-info', 'filter', 'location-marker', 'location-add', 'logout', 'logo-or', 'map', 'map-pins', 'mail', 'menu', 'menu-alt-2', 'menu-off', 'messages', 'notification', 'qrcode', 'question-mark', 'question-mark-round', 'refresh', 'scan', 'search', 'security', 'settings', 'ship', 'table', 'trash', 'user', 'users', 'x'
+    '2fa', 'add', 'adjustment', 'alert-circle', 'alert-triangle', 'arrow-back-up', 'arrows-expand', 'arrow-left', 'arrow-right', 'bell', 'bordbuch', 'calendar-event', 'check', 'chevron-down', 'chevron-left', 'chevron-right', 'chevron-up', 'clock', 'cursor', 'edit', 'dashboard', 'dots', 'dots-horizontal', 'dots-vertical', 'download', 'drag-n-drop', 'drag-n-drop-click', 'exclamation', 'eye', 'eye-off', 'file-info', 'filter', 'location-marker', 'location-add', 'logout', 'logo-or', 'map', 'map-pins', 'mail', 'menu', 'menu-alt-2', 'menu-off', 'messages', 'notification', 'qrcode', 'question-mark', 'question-mark-round', 'refresh', 'scan', 'search', 'security', 'settings', 'ship', 'table', 'trash', 'user', 'users', 'x'
   ]
 
-  letter_a: string[] = ['add', 'adjustment', 'alert-circle', 'alert-triangle', 'arrow-back-up', 'arrow-left', 'arrow-right']
+  letter_a: string[] = ['add', 'adjustment', 'alert-circle', 'alert-triangle', 'arrow-back-up', 'arrows-expand', 'arrow-left', 'arrow-right']
   letter_b: string[] = ['bell']
   letter_c: string[] = ['calendar-event', 'check', 'chevron-down', 'chevron-left', 'chevron-right', 'chevron-up', 'clock', 'cursor']
   letter_d: string[] = ['dashboard', 'dots', 'dots-horizontal', 'dots-vertical', 'download', 'drag-n-drop', 'drag-n-drop-click']
