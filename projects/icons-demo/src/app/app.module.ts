@@ -1,20 +1,18 @@
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { IconLibraryModule } from 'projects/icon-library/src/public-api';
 
 import { AppComponent } from './app.component';
+import { IconsModule } from 'projects/icons/src/public-api';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    CommonModule,
     BrowserModule,
     FormsModule,
-    IconLibraryModule
+    IconsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,35 +3,34 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-icon-library": {
+    "icons-demo": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
           "style": "sass"
-        },
-        "@schematics/angular:application": {
-          "strict": true
         }
       },
-      "root": "",
-      "sourceRoot": "src",
+      "root": "projects/icons-demo",
+      "sourceRoot": "projects/icons-demo/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-icon-library",
-            "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfig.app.json",
+            "outputPath": "dist/icons-demo",
+            "index": "projects/icons-demo/src/index.html",
+            "main": "projects/icons-demo/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/icons-demo/tsconfig.app.json",
             "inlineStyleLanguage": "sass",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "projects/icons-demo/src/favicon.ico",
+              "projects/icons-demo/src/assets"
             ],
             "styles": [
-              "src/styles.sass"
+              "projects/icons-demo/src/styles.sass"
             ],
             "scripts": []
           },
@@ -47,12 +46,6 @@
                   "type": "anyComponentStyle",
                   "maximumWarning": "2kb",
                   "maximumError": "4kb"
-                }
-              ],
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
                 }
               ],
               "outputHashing": "all"
@@ -72,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular-icon-library:build:production"
+              "browserTarget": "icons-demo:build:production"
             },
             "development": {
-              "browserTarget": "angular-icon-library:build:development"
+              "browserTarget": "icons-demo:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,46 +76,47 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-icon-library:build"
+            "browserTarget": "icons-demo:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfig.spec.json",
-            "karmaConfig": "karma.conf.js",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/icons-demo/tsconfig.spec.json",
             "inlineStyleLanguage": "sass",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "projects/icons-demo/src/favicon.ico",
+              "projects/icons-demo/src/assets"
             ],
             "styles": [
-              "src/styles.sass"
+              "projects/icons-demo/src/styles.sass"
             ],
             "scripts": []
           }
         }
       }
     },
-    "icon-library": {
+    "icons": {
       "projectType": "library",
-      "root": "projects/icon-library",
-      "sourceRoot": "projects/icon-library/src",
+      "root": "projects/icons",
+      "sourceRoot": "projects/icons/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/icon-library/ng-package.json"
+            "project": "projects/icons/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/icon-library/tsconfig.lib.prod.json"
+              "tsConfig": "projects/icons/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/icon-library/tsconfig.lib.json"
+              "tsConfig": "projects/icons/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -130,13 +124,14 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/icon-library/src/test.ts",
-            "tsConfig": "projects/icon-library/tsconfig.spec.json",
-            "karmaConfig": "projects/icon-library/karma.conf.js"
+            "tsConfig": "projects/icons/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
           }
         }
       }
     }
-  },
-  "defaultProject": "angular-icon-library"
+  }
 }

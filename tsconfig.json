@@ -8,9 +8,8 @@
     "strict": true,
     "noImplicitOverride": true,
     "paths": {
-      "icon-library": [
-        "dist/icon-library/icon-library",
-        "dist/icon-library"
+      "icons": [
+        "dist/icons"
       ]
     },
     "noPropertyAccessFromIndexSignature": true,
@@ -22,10 +21,11 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "es2017",
-    "module": "es2020",
+    "target": "ES2022",
+    "module": "ES2022",
+    "useDefineForClassFields": false,
     "lib": [
-      "es2020",
+      "ES2022",
       "dom"
     ]
   },

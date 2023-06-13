@@ -1,0 +1,17 @@
+<div class="container mx-auto">
+  <h1 class="mb-3 text-2xl">Angular Icon Library</h1>
+  <h2 class="mb-3 text-lg">Single Icon</h2>
+  <div class="w-12 h-12 mb-5 border border-gray-800 rounded">
+    <icons class="stroke-1 stroke-current" name="2fa"></icons>
+  </div>
+
+  <h2 class="mb-3 text-lg">Icons</h2>
+  <div class="mb-5 grid grid-cols-5">
+    <div class="flex flex-row w-48 h-12 m-1 items-center justify-between bg-gray-100 rounded shadow-md" *ngFor="let name of names">
+      <p class="w-36 p-2">{{ name }}</p>
+      <div class="w-12 h-12 p-1 border-l border-gray-400 text-gray-700 hover:bg-gray-800 hover:text-gray-100 hover:rounded-r">
+        <icons class="stroke-1 stroke-current" name="{{ name }}"></icons>
+      </div>
+    </div>
+  </div>
+</div>

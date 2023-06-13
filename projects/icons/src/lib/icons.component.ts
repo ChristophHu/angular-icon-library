@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, Renderer2, ViewEncapsulation } from '@angular/core';
+import { Component, ElementRef, Input, Renderer2, ViewEncapsulation } from '@angular/core'
 import { icons } from './icons'
 
 @Component({
@@ -6,10 +6,10 @@ import { icons } from './icons'
   template: `
     <ng-content></ng-content>
   `,
-  styleUrls: ['./icon-library.component.sass'],
+  styleUrls: [],
   encapsulation: ViewEncapsulation.Emulated
 })
-export class IconLibraryComponent {
+export class IconsComponent {
   @Input() set name(iconName: string) {
     this.renderer.setProperty(this.element.nativeElement,'innerHTML', icons[iconName] || null)
   }
